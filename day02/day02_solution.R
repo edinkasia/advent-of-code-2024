@@ -5,6 +5,8 @@ library(here)
 reports <- read_csv(here("day02", "day02_data.csv"), 
                     col_names = FALSE)
 
+# First star
+
 # Function for checking if the report is safe
 check_if_safe <- function(x_vector){
   # initialise with an empty vector
