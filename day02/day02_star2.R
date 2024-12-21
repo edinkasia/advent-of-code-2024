@@ -59,6 +59,7 @@ check_all_reactors <- function(list_of_vectors){
   sum(list_of_safe_reactors)
 }
 
+check_all_reactors(reports)
 
 ## Second star
 # test_vector1 <- c(1,2,10,4,1)
@@ -73,5 +74,5 @@ check_all_reactors <- function(list_of_vectors){
 # apply(test_vectorall, MARGIN = 1, FUN = check_if_safe_forgiving)
 
 # check_all_reactors(test_data)
-check_all_reactors(reports)
+
 
