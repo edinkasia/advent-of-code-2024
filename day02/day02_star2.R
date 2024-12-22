@@ -54,7 +54,8 @@ check_if_safe_forgiving <- function(x_vector){
 
 check_all_reactors <- function(list_of_vectors){
   
-  list_of_safe_reactors <- apply(list_of_vectors, MARGIN = 1, FUN = check_if_safe_forgiving)
+  list_of_safe_reactors <- apply(list_of_vectors, MARGIN = 1, 
+                                 FUN = check_if_safe_forgiving)
   print(list_of_safe_reactors)
   sum(list_of_safe_reactors)
 }
