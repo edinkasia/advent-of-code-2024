@@ -18,6 +18,7 @@ check_if_safe <- function(x_vector){
     # calculate the difference between consecutive vector elements
     differences[[i]] <- x_vector[i+1]-x_vector[i]
   }
+  differences <- differences[!is.na(differences)]
   all_increase <- sum(differences > 0) == length(differences)
   all_decrease <- sum(differences < 0) == length(differences)
   all_between_one_three <- sum(abs(differences) %in% c(1, 2, 3)) == length(differences) 
@@ -28,11 +29,11 @@ check_if_safe <- function(x_vector){
 }
 
 # Test function on example data
-check_if_safe(x_vector = c(7,6,4,2,1))
+check_if_safe(x_vector = c(7,6,4,2,1,NA))
 
 # Use the function on my data
 result_column <- apply(reports, MARGIN = 1, FUN = check_if_safe)
-print(result_column)
+# print(result_column)
 # Calculate the final result
 sum(result_column == "safe")
 # 
