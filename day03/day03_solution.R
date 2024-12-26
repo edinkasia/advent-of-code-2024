@@ -33,3 +33,20 @@ solution_df <- instructions_clean_df %>%
 sum(solution_df$solution_column)
 
 ## Second star
+
+# Create a list of strings that end with do
+
+conditional_memory_calculation <- function(file){
+  
+}
+
+second_star_data <- computer_instructions %>% 
+  paste0(.,"do") %>% 
+  str_match_all(.,"(.*?)do")
+
+second_star_data_matrix <- second_star_data[[1]]
+second_star_data_matrix[1,1]
+second_star_data_vector[2]
+
+
+
